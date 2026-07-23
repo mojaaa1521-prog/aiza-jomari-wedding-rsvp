@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --color-burgundy: #8A2846;
+  --color-burgundy-dark: #6D1E39;
+
+  --color-gold: #C8A04A;
+
+  --color-champagne: #F7E7CE;
+
+  --background: #FCF8F5;
+
+  --foreground: #3A2B2B;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Wedding Theme Colors */
+
+.bg-burgundy {
+  background: #8A2846;
+}
+
+.text-burgundy {
+  color: #8A2846;
+}
+
+.bg-champagne {
+  background: #F5E6C8;
+}
+
+.text-champagne {
+  color: #F5E6C8;
+}
+
+.section {
+  padding: 100px 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.08);
+}
+
+/* =======================================
+   Luxury Animations
+======================================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 rgba(200,160,74,0);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(200,160,74,.35);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(200,160,74,0);
+  }
+}
+
+.animate-glow {
+  animation: glow 4s infinite;
+}
+
+
+/* =======================================
+   Smooth Scrolling
+======================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================================
+   Theme Transition
+======================================= */
+
+body {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+/* =======================================
+   Dark Theme
+======================================= */
+
+.dark {
+  --background: #1A1114;
+  --foreground: #F7E7CE;
+
+  --color-burgundy: #C8A04A;
+  --color-burgundy-dark: #A88535;
+
+  --color-gold: #F2C86A;
+  --color-champagne: #2C1C23;
+}
