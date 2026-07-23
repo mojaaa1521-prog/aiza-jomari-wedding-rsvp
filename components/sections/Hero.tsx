@@ -9,13 +9,13 @@ export default function Hero() {
 
       {/* Background Image */}
 
-      <Image
-        src="/couple/Hero.jpg"
-        alt="Aiza & Jomari"
-        fill
-        priority
-        className="object-cover object-bottom"
-      />
+     <Image
+  src="/couple/hero.jpg"
+  alt="Aiza & Jomari"
+  fill
+  priority
+  className="object-cover object-bottom"
+/>
 
       {/* Gradient Overlay */}
   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
