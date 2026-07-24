@@ -9,8 +9,6 @@ type RSVPData = {
   phone: string;
   attending: string;
   guests: number;
-  meal: string;
-  dietary: string;
   message: string;
 };
 
@@ -122,10 +120,16 @@ export default function RSVPForm() {
           />
 
           <input
-            {...register("phone")}
+            {...register("phone", { required: true })}
             placeholder="Mobile Number"
             className={inputStyle}
           />
+
+            {errors.phone && (
+            <p className="mt-1 text-sm text-red-500">
+            Mobile number is required.
+            </p>
+            )}
 
           <select
             {...register("attending", { required: true })}
@@ -137,38 +141,16 @@ export default function RSVPForm() {
             <option value="No">Regretfully Decline</option>
           </select>
 
-          <input
-            type="number"
-            min="1"
-            max="10"
-            placeholder="Number of Guests"
-            {...register("guests", { valueAsNumber: true })}
-            className={inputStyle}
-          />
-
           <select
-            {...register("meal", {
-              required: "Please select a meal preference",
+            {...register("guests", {
+            valueAsNumber: true,
             })}
-            className={inputStyle}
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select Meal Preference
-            </option>
-
-            <option value="Chicken">Chicken</option>
-            <option value="Beef">Beef</option>
-            <option value="Fish">Fish</option>
-            <option value="Vegetarian">Vegetarian</option>
-          </select>
-
-          <textarea
-            {...register("dietary")}
-            rows={3}
-            placeholder="Dietary Restrictions"
-            className={inputStyle}
-          />
+            defaultValue={0}
+            className="w-full border rounded-xl p-4"
+            >
+            <option value={0}>No Additional Guest</option>
+            <option value={1}>1 Additional Guest</option>
+            </select>
 
           <textarea
             {...register("message")}
