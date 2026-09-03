@@ -26,24 +26,14 @@ export const metadata: Metadata = {
     siteName: "Aiza & Jomari Wedding",
     images: [
       {
-        url: "https://aiza-jomari-wedding-rsvp.vercel.app/couple/hero.jpg",
-        width: 1200,
-        height: 630,
+        url: "https://aiza-jomari-wedding-rsvp.vercel.app/og-image.png",
+        width: 1388,
+        height: 720,
         alt: "Aiza & Jomari Wedding Invitation",
       },
     ],
     locale: "en_US",
     type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Aiza & Jomari | Wedding Invitation",
-    description:
-      "Join us as we celebrate our special day on December 17, 2026.",
-    images: [
-      "https://aiza-jomari-wedding-rsvp.vercel.app/couple/hero.jpg",
-    ],
   },
 };
 
