@@ -27,83 +27,191 @@ export default function VenueCard({
   return (
     <div
       className="
+        group
+        flex
+        h-full
+        flex-col
         overflow-hidden
-        rounded-3xl
-        bg-white
-        shadow-xl
+        rounded-[30px]
+        border
+        border-[#D8B86A]/60
+        bg-[#FFFDF9]
+        shadow-[0_15px_45px_rgba(58,43,43,0.18)]
         transition-all
         duration-500
-        hover:-translate-y-2
-        hover:shadow-2xl
-        dark:bg-[#2C1C23]
+        hover:-translate-y-1
+        hover:shadow-[0_20px_55px_rgba(58,43,43,0.25)]
       "
     >
-      {/* Hero Image */}
-      <div className="group relative h-72 overflow-hidden">
+
+      {/* VENUE PHOTO */}
+      <div className="relative h-[220px] shrink-0 overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="
+            object-cover
+            object-center
+            transition-transform
+            duration-700
+            group-hover:scale-105
+          "
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-        <div className="absolute bottom-8 left-8 text-white">
-          {icon}
-
-          <h3 className="mt-4 font-[family:var(--font-heading)] text-5xl">
-            {title}
-          </h3>
-
-          <div className="mt-4 flex items-center gap-2">
-            <CalendarDays size={18} />
-            <span>{date}</span>
-          </div>
-
-          <div className="mt-2 flex items-center gap-2">
-            <Clock3 size={18} />
-            <span>{time}</span>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="p-8">
-        <div className="flex items-start gap-3">
-          <MapPin className="mt-1 text-[var(--color-burgundy)]" />
+      {/* CARD CONTENT */}
+      <div className="flex flex-1 flex-col p-7">
 
-          <p className="text-[var(--foreground)]">
-            {location}
-          </p>
+        {/* TITLE */}
+        <div className="flex items-center gap-4">
+
+          <div
+            className="
+              flex
+              h-14
+              w-14
+              shrink-0
+              items-center
+              justify-center
+              rounded-full
+              bg-[#F7E7CE]
+              text-[#8A2846]
+              transition-transform
+              duration-300
+              group-hover:scale-105
+            "
+          >
+            {icon}
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C8A04A]">
+              Our Wedding
+            </p>
+
+            <h3
+              className="
+                mt-1
+                font-[family:var(--font-heading)]
+                text-4xl
+                leading-none
+                text-[#3A2B2B]
+              "
+            >
+              {title}
+            </h3>
+          </div>
+
         </div>
 
-        <a
-          href={map}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            mt-8
-            inline-flex
-            w-full
-            items-center
-            justify-center
-            rounded-full
-            bg-[var(--color-burgundy)]
-            px-8
-            py-4
-            font-semibold
-            text-white
-            shadow-lg
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-[var(--color-burgundy-dark)]
-            hover:shadow-xl
-          "
-        >
-          Get Directions →
-        </a>
+        {/* DIVIDER */}
+        <div className="my-6 h-px bg-[#E8DCCF]" />
+
+        {/* DATE & TIME */}
+        <div className="grid min-h-[64px] gap-4 sm:grid-cols-2">
+
+          {/* DATE */}
+          <div className="flex items-center gap-3">
+
+            <CalendarDays
+              size={19}
+              className="shrink-0 text-[#C8A04A]"
+            />
+
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#A58B72]">
+                Date
+              </p>
+
+              <p className="mt-1 text-sm text-[#3A2B2B]">
+                {date}
+              </p>
+            </div>
+
+          </div>
+
+          {/* TIME */}
+          <div className="flex items-center gap-3">
+
+            <Clock3
+              size={19}
+              className="shrink-0 text-[#C8A04A]"
+            />
+
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#A58B72]">
+                Time
+              </p>
+
+              <p className="mt-1 text-sm text-[#3A2B2B]">
+                {time}
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* LOCATION */}
+        <div className="mt-6 flex min-h-[72px] items-start gap-3">
+
+          <MapPin
+            size={21}
+            className="mt-1 shrink-0 text-[#8A2846]"
+          />
+
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#A58B72]">
+              Location
+            </p>
+
+            <p className="mt-1 leading-relaxed text-[#3A2B2B]">
+              {location}
+            </p>
+          </div>
+
+        </div>
+
+        {/* BUTTON */}
+        <div className="mt-auto pt-7">
+
+          <a
+            href={map}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              flex
+              w-full
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-[#C8A04A]
+              bg-[#8A2846]
+              px-6
+              py-3.5
+              font-semibold
+              text-white
+              shadow-md
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-[#6D1E39]
+              hover:shadow-lg
+            "
+          >
+            Get Directions
+            <span className="ml-2">
+              →
+            </span>
+          </a>
+
+        </div>
+
       </div>
     </div>
   );

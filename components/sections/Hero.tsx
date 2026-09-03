@@ -1,25 +1,22 @@
 "use client";
 
-import FloralBackground from "@/components/floral/FloralBackground";
-
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-[center_35%]"
       style={{
         backgroundImage: "url('/couple/hero.jpg')",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Soft Overlay - keeps the photo visible */}
+      <div className="absolute inset-0 bg-black/10" />
 
-      {/* Floral Decorations */}
-      <FloralBackground />
+      {/* Subtle Gradient - helps text remain readable */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/40" />
 
       {/* Hero Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
-        <p className="uppercase tracking-[0.55em] text-xs font-medium text-[#F7E7CE]/90">
+        <p className="text-xs font-medium uppercase tracking-[0.55em] text-[#F7E7CE]/90">
           Together with our families
         </p>
 
@@ -37,11 +34,11 @@ export default function Hero() {
           December 17, 2026
         </p>
 
-        <p className="mt-4 text-lg text-white/90">
+        <p className="mt-4 text-lg text-white/95">
           Ceremony • 1:00 PM
         </p>
 
-        <p className="mx-auto mt-2 max-w-xl text-white/80">
+        <p className="mx-auto mt-2 max-w-xl text-white/90">
           Minor Basilica of the National Shrine of Our Lady of Mount Carmel
         </p>
 

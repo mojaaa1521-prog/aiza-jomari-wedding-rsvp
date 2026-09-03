@@ -4,6 +4,7 @@ import WeddingDetails from "@/components/sections/WeddingDetails";
 import RSVPForm from "@/components/sections/RSVPForm";
 import ThemeToggle from "@/components/layout/ThemeToggle";
 import MusicPlayer from "@/components/layout/MusicPlayer";
+import OurJourney from "@/components/sections/OurJourney";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Countdown />
 
       <WeddingDetails />
+
+      <OurJourney />
 
       <RSVPForm />
 
