@@ -262,7 +262,7 @@ export default function OurJourney() {
                 </div>
 
                 <p className="mt-5 text-xs tracking-[0.15em] text-[#C8A04A]">
-                  JUNE 4, 2021
+                  JUNE 4, 2020
                 </p>
 
                 <h4 className="mt-2 font-[family:var(--font-heading)] text-xl text-[#3A2B2B]">
