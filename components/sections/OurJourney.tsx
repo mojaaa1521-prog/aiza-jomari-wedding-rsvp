@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 const photos = [
-  { src: "/gallery/photo2.jpg", title: "Our Special Day" },
-  { src: "/gallery/photo14.jpg", title: "Together" },
-  { src: "/gallery/photo15.jpg", title: "Every Moment" },
-  { src: "/gallery/photo8.jpg", title: "Our Journey" },
-  { src: "/gallery/photo16.jpg", title: "Side by Side" },
-  { src: "/gallery/photo6.jpg", title: "With You" },
-  { src: "/gallery/photo10.jpg", title: "Forever" },
+  { src: "/gallery/photo2.jpg" },
+  { src: "/gallery/photo14.jpg" },
+  { src: "/gallery/photo15.jpg" },
+  { src: "/gallery/photo8.jpg" },
+  { src: "/gallery/photo16.jpg" },
+  { src: "/gallery/photo6.jpg" },
+  { src: "/gallery/photo10.jpg" },
 ];
 
 export default function OurJourney() {
@@ -99,10 +99,6 @@ export default function OurJourney() {
               <p className="text-xs uppercase tracking-[0.45em] text-[#F2C86A]">
                 Aiza & Jomari
               </p>
-
-              <h3 className="mt-2 font-[family:var(--font-heading)] text-4xl md:text-5xl">
-                {photos[current].title}
-              </h3>
 
             </div>
 
