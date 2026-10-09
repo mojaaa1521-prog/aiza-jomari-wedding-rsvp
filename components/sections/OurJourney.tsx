@@ -58,9 +58,6 @@ export default function OurJourney() {
         {/* ================================= */}
 
         <div className="mb-16 text-center">
-          <p className="text-sm uppercase tracking-[0.45em] text-[#8A2846]">
-            Our Journey
-          </p>
 
           <h2 className="mt-4 font-[family:var(--font-heading)] text-5xl text-[#8A2846] md:text-6xl">
             Our Love Story

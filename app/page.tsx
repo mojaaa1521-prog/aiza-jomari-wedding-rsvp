@@ -4,6 +4,7 @@ import WeddingDetails from "@/components/sections/WeddingDetails";
 import RSVPForm from "@/components/sections/RSVPForm";
 import ThemeToggle from "@/components/layout/ThemeToggle";
 import MusicPlayer from "@/components/layout/MusicPlayer";
+import WeddingAttire from "@/components/sections/WeddingAttire";
 import OurJourney from "@/components/sections/OurJourney";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
       <WeddingDetails />
 
       <OurJourney />
-
+      <WeddingAttire />
       <RSVPForm />
 
        <ThemeToggle />
