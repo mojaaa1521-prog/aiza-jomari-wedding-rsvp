@@ -6,12 +6,16 @@ import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 const photos = [
   { src: "/gallery/photo2.jpg" },
+  { src: "/gallery/photo19.jpeg" },
   { src: "/gallery/photo14.jpg" },
   { src: "/gallery/photo15.jpg" },
   { src: "/gallery/photo8.jpg" },
+  { src: "/gallery/photo17.jpeg" },
   { src: "/gallery/photo16.jpg" },
   { src: "/gallery/photo6.jpg" },
+  { src: "/gallery/photo18.jpeg" },
   { src: "/gallery/photo10.jpg" },
+  
 ];
 
 export default function OurJourney() {

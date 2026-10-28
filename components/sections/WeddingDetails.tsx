@@ -21,7 +21,7 @@ export default function WeddingDetails() {
 
           <SectionTitle
             eyebrow="Our Wedding"
-            title="Join Us On Our Special Day"
+            title="Join us on our Special Day"
             subtitle="Together with our families, we invite you to celebrate our wedding."
           />
 
